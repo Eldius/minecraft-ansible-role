@@ -1,0 +1,18 @@
+---
+# tasks file for minecraft-ansible-role
+- name: Install OpenJDK
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - openjdk-8-jdk
+    - screen
+    - git
+    - wget
+    - curl
+
+- name: Create server user
+  user:
+    name: "{{ app_service_user }}"
+    system: true
+    state: present

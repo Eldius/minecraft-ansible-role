@@ -1,0 +1,3 @@
+---
+# defaults file for minecraft-ansible-role
+app_service_user: minecrafter
