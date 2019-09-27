@@ -95,3 +95,14 @@ minecraft_content_logfile_enabled: false
 #  - name: Beltranus
 #    ignoresPlayerLimit: false
 minecraft_allowed_users: []
+
+# The list of users permissions when the white list is enabled
+# Allowed values: An array with xuid and permission attributes
+# Example:
+#  - xuid: 001
+#    permission: operator
+#  - xuid: 002
+#    permission: member
+#  - xuid: 003
+#    permission: visitor
+minecraft_user_permissions: []
