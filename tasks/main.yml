@@ -34,6 +34,8 @@
     remote_src: yes
     mode: 0755
   become: true
+  notify:
+    - restart minecraft-server
 
 - name: Creating server config file
   template:
@@ -43,6 +45,8 @@
     group: "{{ app_service_user }}"
     mode: 0755
   become: true
+  notify:
+    - restart minecraft-server
 
 - name: Creating white list file
   template:
@@ -53,6 +57,8 @@
     mode: 0755
   become: true
   when: minecraft_white_list
+  notify:
+    - restart minecraft-server
 
 - name: Creating service file
   template:

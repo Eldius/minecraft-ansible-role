@@ -9,8 +9,8 @@ WorkingDirectory={{ minecraft_install_folder }}
 ExecStart={{ minecraft_install_folder }}/bedrock_server
 Restart=always
 Environment=LD_LIBRARY_PATH={{ minecraft_install_folder }}
-StandardOutput=/var/log/{{ minecraft_service_name }}/{{ minecraft_service_name }}.log
-StandardError=/var/log/{{ minecraft_service_name }}/{{ minecraft_service_name }}.log
+StandardOutput=/var/log/{{ minecraft_service_name }}.log
+StandardError=/var/log/{{ minecraft_service_name }}.log
 
 [Install]
 WantedBy=multi-user.target

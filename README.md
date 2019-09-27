@@ -1,4 +1,4 @@
-Role Name
+minecraft-ansible-role
 =========
 
 A brief description of the role goes here.
@@ -46,3 +46,10 @@ Author Information
 
 An optional section for the role authors to include contact information, or a
 website (HTML is not allowed).
+
+Reference links
+---------------
+
+- [Minecraft Server Java Edition](https://www.minecraft.net/pt-br/download/server/)
+- [Como Criar um Server de Minecraft PT-BR](https://www.hostinger.com.br/tutoriais/como-instalar-minecraft-server-no-centos-7/)
+- [How to redirect output of systemd service to a file - StackOverflow](https://stackoverflow.com/questions/37585758/how-to-redirect-output-of-systemd-service-to-a-file)
