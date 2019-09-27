@@ -106,3 +106,7 @@ minecraft_allowed_users: []
 #  - xuid: 003
 #    permission: visitor
 minecraft_user_permissions: []
+
+# Choose what server to install
+# Allowed values: "java" or "bedrock" (at this moment just the bedrock are available)
+minecraft_server_option: bedrock
