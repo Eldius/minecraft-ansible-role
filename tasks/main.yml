@@ -1,22 +1,21 @@
 ---
-# tasks file for minecraft-ansible-role
 - name: Install dependencies
   apt:
     name:
-#      - openjdk-8-jdk
       - git
       - wget
       - curl
       - unzip
-
     state: present
     update_cache: true
+  become: true
 
 - name: Create service user
   user:
     name: "{{ app_service_user }}"
     system: true
     state: present
+  become: true
 
 - name: Create service folder
   file:
@@ -25,7 +24,7 @@
     owner: "{{ app_service_user }}"
     group: "{{ app_service_user }}"
     mode: 0755
-  become: yes
+  become: true
 
 - name: Getting the server app
   unarchive:
@@ -34,4 +33,23 @@
     creates: "{{ minecraft_install_folder }}/bedrock_server"
     remote_src: yes
     mode: 0755
-  become: yes
+  become: true
+
+- name: Creating server config file
+  template:
+    src: server.properties
+    dest: "{{ minecraft_install_folder }}/server.properties"
+    owner: "{{ app_service_user }}"
+    group: "{{ app_service_user }}"
+    mode: 0755
+  become: true
+
+- name: Creating service file
+  template:
+    src: minecraft.service
+    dest: "/etc/systemd/system/{{ minecraft_service_name }}.service"
+    owner: "root"
+    group: "root"
+  become: true
+  notify:
+    - restart minecraft-server

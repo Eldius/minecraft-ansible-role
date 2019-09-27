@@ -1,2 +1,7 @@
 ---
-# handlers file for minecraft-ansible-role
+- name: restart minecraft-server
+  service:
+    name: "{{ minecraft_service_name }}"
+    state: restarted
+    enabled: yes
+  become: true
