@@ -86,3 +86,12 @@ minecraft_texturepack_required: false
 # Enables logging content errors to a file
 # Allowed values: "true" or "false"
 minecraft_content_logfile_enabled: false
+
+# The list of allowed users when the white list is enabled
+# Allowed values: An array with name and ignoresPlayerLimit attributes
+# Example:
+#  - name: Fulanus
+#    ignoresPlayerLimit: false
+#  - name: Beltranus
+#    ignoresPlayerLimit: false
+minecraft_allowed_users: []

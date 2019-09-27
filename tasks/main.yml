@@ -44,6 +44,16 @@
     mode: 0755
   become: true
 
+- name: Creating white list file
+  template:
+    src: whitelist.json.j2
+    dest: "{{ minecraft_install_folder }}/whitelist.json"
+    owner: "{{ app_service_user }}"
+    group: "{{ app_service_user }}"
+    mode: 0755
+  become: true
+  when: minecraft_white_list
+
 - name: Creating service file
   template:
     src: minecraft.service
