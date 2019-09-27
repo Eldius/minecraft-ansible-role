@@ -14,7 +14,7 @@
 
 - name: Creating server config file
   template:
-    src: server.properties
+    src: server_bedrock.properties
     dest: "{{ minecraft_install_folder }}/server.properties"
     owner: "{{ app_service_user }}"
     group: "{{ app_service_user }}"
@@ -49,7 +49,7 @@
 
 - name: Creating service file
   template:
-    src: minecraft.service
+    src: minecraft_bedrock.service
     dest: "/etc/systemd/system/{{ minecraft_service_name }}.service"
     owner: "root"
     group: "root"

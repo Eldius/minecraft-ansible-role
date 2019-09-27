@@ -53,3 +53,7 @@ Reference links
 - [Minecraft Server Java Edition](https://www.minecraft.net/pt-br/download/server/)
 - [Como Criar um Server de Minecraft PT-BR](https://www.hostinger.com.br/tutoriais/como-instalar-minecraft-server-no-centos-7/)
 - [How to redirect output of systemd service to a file - StackOverflow](https://stackoverflow.com/questions/37585758/how-to-redirect-output-of-systemd-service-to-a-file)
+- [Bedrock Edition server software](https://minecraft.gamepedia.com/Bedrock_Edition_server_software)
+- [Servers](https://minecraft.gamepedia.com/Custom_servers)
+- [Setting up a server](https://minecraft.gamepedia.com/Tutorials/Setting_up_a_server)
+- [server.properties](https://minecraft.gamepedia.com/Server.properties)
