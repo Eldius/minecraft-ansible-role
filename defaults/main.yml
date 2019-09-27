@@ -38,7 +38,7 @@ minecraft_max_players: 10
 # Clients connecting to remote (non-LAN) servers will always require Xbox Live authentication regardless of this setting.
 # If the server accepts connections from the Internet, then it's highly recommended to enable online-mode.
 # Allowed values: "true" or "false"
-minecraft_online_mode: false
+minecraft_online_mode: true
 
 # If true then all connected players must be listed in the separate whitelist.json file.
 # Allowed values: "true" or "false"
