@@ -27,9 +27,9 @@
   become: true
 
 - name: Install bedrock version
-  include_tasks: tasks/bedrock.yml
+  include_tasks: bedrock.yml
   when: minecraft_server_option == 'bedrock'
 
 - name: Install java version
-  include_tasks: tasks/java.yml
+  include_tasks: java.yml
   when: minecraft_server_option == 'java'
