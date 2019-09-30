@@ -27,11 +27,11 @@ def test_application_folder(host):
 def test_service_file(host):
     assert host.file(
         '/etc/systemd/system/minecraft.service'
-        ).find(
+        ).contains(
             "ExecStart=/app/minecraft/bedrock_server"
             ) > 0
     assert host.file(
         '/etc/systemd/system/minecraft.service'
-        ).find(
+        ).contains(
             "Environment=LD_LIBRARY_PATH=/app/minecraft"
             ) > 0
