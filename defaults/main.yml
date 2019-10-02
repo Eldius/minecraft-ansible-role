@@ -10,6 +10,10 @@ app_service_user: minecrafter
 # Allowed values: Any valid folder
 minecraft_install_folder: /app/minecraft
 
+# The version of minecraft java to install
+# Allowed values: Valid verions of minecraft, use "latest" to get the newest version
+minecraft_java_version: latest
+
 # The name used to identify the service by Systemd
 # Allowed values: Any string
 minecraft_service_name: minecraft
